@@ -1,10 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from "react"
+import ReactDOM from "react-dom/client"
+import App from "./App"
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+import { ConfigProvider } from "antd-mobile"
+import zhCN from "antd-mobile/es/locales/zh-CN"
+import "./reset.css"
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <ConfigProvider locale={zhCN}>
+      <App />
+    </ConfigProvider>
+  </React.StrictMode>
 )
